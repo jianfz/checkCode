@@ -32,6 +32,7 @@ public class AccountService {
 		return accountMapper.update(name, money, id);
 	}
 
+	//删除
 	public int delete(int id) {
 		return accountMapper.delete(id);
 	}
