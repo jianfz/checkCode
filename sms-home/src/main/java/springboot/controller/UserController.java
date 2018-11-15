@@ -22,4 +22,7 @@ public class UserController {
 		List<User> userList = userService.findUserList();
 		return userList;
 	}
+	
+
+
 }

@@ -10,6 +10,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import springboot.model.TestMybatis;
 import springboot.redis.RedisDao;
@@ -106,5 +107,11 @@ public class BaseController {
 	public User getHash(String username) {
 		User u = redisDao.getHash("user" + username);
 		return u;
+	}
+	@RequestMapping("logList")
+	public ModelAndView  getLog() {
+		ModelAndView mv = new ModelAndView();
+	    mv.setViewName("logList");
+	    return mv;
 	}
 }

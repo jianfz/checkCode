@@ -7,6 +7,7 @@ springboot\checkCodeUtil\IdleConnectionEvictor.class
 springboot\service\AccountService.class
 springboot\activityMq\Project.class
 springboot\checkCodeUtil\HttpAPIService.class
+springboot\controller\LoginController.class
 springboot\redis\RedisDao.class
 springboot\BootFilter.class
 springboot\checkCodeUtil\HttpAPIService$1.class

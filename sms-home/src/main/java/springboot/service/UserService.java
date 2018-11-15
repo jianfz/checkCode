@@ -40,6 +40,14 @@ public class UserService {
 		return userMapper.findUser(id);
 	}
 
+	
+	@Cacheable(key = "#p0")
+	public User findUserByup(String username,String password) {
+		System.out.println("***********************查询************************");
+		return userMapper.findUserByup(username,password);
+	}
+	
+	
 	public List<User> findUserList() {
 		return userMapper.findUserList();
 	}

@@ -29,4 +29,8 @@ public interface UserMapper {
 
 	@Select("select * from sys_user")
 	List<User> findUserList();
+	
+	
+	@Select("select * from sys_user where username= #{username} and password=#{password}")
+	User findUserByup(@Param("username") String username,@Param("password") String password);
 }
