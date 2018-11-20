@@ -2,7 +2,7 @@ package springboot.activityMq;
 
 //@Component
 public class Project {
-
+//
 //	@Autowired
 //	private JmsMessagingTemplate jmsMessagingTemplate;
 //	@Autowired
