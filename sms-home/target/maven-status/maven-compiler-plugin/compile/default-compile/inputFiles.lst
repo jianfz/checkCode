@@ -1,6 +1,7 @@
 D:\Git\checkCode\sms-home\src\main\java\springboot\model\TestMybatis.java
 D:\Git\checkCode\sms-home\src\main\java\springboot\checkCodeUtil\IdleConnectionEvictor.java
 D:\Git\checkCode\sms-home\src\main\java\springboot\mapper\UserMapper.java
+D:\Git\checkCode\sms-home\src\main\java\springboot\mapper\WyUploadDataMapper.java
 D:\Git\checkCode\sms-home\src\main\java\springboot\mapper\AccountMapper.java
 D:\Git\checkCode\sms-home\src\main\java\springboot\redis\TestRedis.java
 D:\Git\checkCode\sms-home\src\main\java\springboot\BootFilter.java
@@ -20,8 +21,11 @@ D:\Git\checkCode\sms-home\src\main\java\springboot\controller\UserController.jav
 D:\Git\checkCode\sms-home\src\main\java\springboot\model\UrlConfig.java
 D:\Git\checkCode\sms-home\src\main\java\springboot\redis\RedisDao.java
 D:\Git\checkCode\sms-home\src\main\java\springboot\checkCodeUtil\MyX509TrustManager.java
+D:\Git\checkCode\sms-home\src\main\java\springboot\service\WyUploadDataService.java
+D:\Git\checkCode\sms-home\src\main\java\springboot\controller\WyUploadDataController.java
 D:\Git\checkCode\sms-home\src\main\java\springboot\checkCodeUtil\HttpAPIService.java
 D:\Git\checkCode\sms-home\src\main\java\springboot\service\UserService.java
 D:\Git\checkCode\sms-home\src\main\java\springboot\controller\LoginController.java
 D:\Git\checkCode\sms-home\src\main\java\springboot\controller\CheckCodeController.java
 D:\Git\checkCode\sms-home\src\main\java\springboot\checkCodeUtil\HttpsTest.java
+D:\Git\checkCode\sms-home\src\main\java\springboot\model\WyUploadData.java
