@@ -32,14 +32,14 @@ public class BootFilter implements Filter {
 		System.out.println("this is MyFilter,url :" + request.getRequestURI());
 			String requestURI = request.getRequestURI().toUpperCase();
 			//如果是登录页面 直接通过。
-			if(requestURI.contains("LOGIN")||requestURI.contains("GETNUM")||requestURI.contains("GETCODE")){
+			if(requestURI.contains("LOGIN")||requestURI.contains("GETNUM")||requestURI.contains("GETCODE")||requestURI.contains("uploadData")){
 				arg2.doFilter(arg0, arg1);
 			}else{
 				HttpSession session = request.getSession();
 				User u = (User)session .getAttribute("user");
 				//session中没有用户，说明没登录
 				if(u==null){
-					response.sendRedirect("http://localhost:8080/sms-home/login");
+					response.sendRedirect("http://47.105.32.32/sms-home/login");
 					return ;
 				}else{
 					arg2.doFilter(arg0, arg1);
