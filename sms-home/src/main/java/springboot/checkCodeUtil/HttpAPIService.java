@@ -50,7 +50,7 @@ public class HttpAPIService {
 		// 声明 http get 请求
 		HttpGet httpGet = new HttpGet(url);
 
-		config.custom().setSocketTimeout(10000).setConnectTimeout(10000).build();
+		config.custom().setSocketTimeout(30000).setConnectTimeout(30000).build();
 		// 装载配置信息
 		httpGet.setConfig(config);
 
