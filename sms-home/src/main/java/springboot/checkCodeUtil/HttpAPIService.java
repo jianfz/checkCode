@@ -48,21 +48,36 @@ public class HttpAPIService {
 	 */
 	public String doGet(String url) throws Exception {
 		// 声明 http get 请求
+		String msg = "connect fail!";
 		HttpGet httpGet = new HttpGet(url);
-
 		config.custom().setSocketTimeout(30000).setConnectTimeout(30000).build();
 		// 装载配置信息
 		httpGet.setConfig(config);
-
-		// 发起请求
-		CloseableHttpResponse response = this.httpClient.execute(httpGet);
-
-		// 判断状态码是否为200
-		if (response.getStatusLine().getStatusCode() == 200) {
+		CloseableHttpClient httpClient1 = null;
+		CloseableHttpResponse response = null;
+		try{
+			httpClient1 = createSSLClientDefault();
+			// 发起请求
+			response = httpClient1.execute(httpGet);
+			// 判断状态码是否为200
+			if (response.getStatusLine().getStatusCode() == 200) {
 			// 返回响应体的内容
-			return EntityUtils.toString(response.getEntity(), "UTF-8");
+				msg = EntityUtils.toString(response.getEntity(), "UTF-8");
+			}else{
+				msg = "response code is not 200!";
+			}
+		}catch(Exception e ){
+			e.printStackTrace();
+			msg = "connect time out !";
+		}finally{
+			if(null!=response){
+				response.close();
+			}
+			if(null!=httpClient1){
+				httpClient1.close();
+			}
 		}
-		return null;
+		return msg;
 	}
 
 	/**
