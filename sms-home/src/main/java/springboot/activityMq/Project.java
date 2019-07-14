@@ -14,4 +14,8 @@ public class Project {
 //	public void send(){
 //		this.jmsMessagingTemplate.convertAndSend(this.queue,"hi,textmq");
 //	}
+	public static void main(String[] args) {
+		Double random = Math.random() * 1000;
+		System.out.println(random.intValue());
+	}
 }
