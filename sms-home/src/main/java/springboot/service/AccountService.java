@@ -24,6 +24,7 @@ public class AccountService {
 		t.setId(id);
 		t.setName(name);
 		t.setMoney(money);
+		System.out.println("test");
 		this.accountMapper.add(t);
 		return this.accountMapper.findAccount(t.getId());
 	}
